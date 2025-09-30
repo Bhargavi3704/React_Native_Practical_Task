@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 export default function CounterScreen({ route }) {
-  const { postTitle } = route.params; // received from DetailsScreen
+  const { postTitle } = route.params;
   const [count, setCount] = useState(0);
 
   return (
     <View style={styles.container}>
-      {/* Show Post Title if available */}
       {postTitle && <Text style={styles.title}>{postTitle}</Text>}
 
       <Text style={styles.body}>Press buttons below to increase or decrease the counter</Text>
@@ -41,3 +40,4 @@ const styles = StyleSheet.create({
   },
   buttonText: { color: "#fff", fontSize: 24, fontWeight: "bold" },
 });
+
