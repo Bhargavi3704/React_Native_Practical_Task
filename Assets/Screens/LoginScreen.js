@@ -17,14 +17,14 @@ export default function LoginScreen({ navigation }) {
       return;
     }
 
-    setLoading(true); // start loading
+    setLoading(true);
 
     Toast.show({
       type: "success",
       text1: "Login Info",
       text2: `Email: ${email}, Password: ${password}`,
       onHide: () => {
-        setLoading(false); // stop loading
+        setLoading(false);
         navigation.navigate("ListScreen");
       },
     });
@@ -97,3 +97,4 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
 });
+
