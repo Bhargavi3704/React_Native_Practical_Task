@@ -7,7 +7,6 @@ export default function DetailsScreen({ route, navigation }) {
 
   const handleOpenCounter = () => {
     setLoading(true);
-    // simulate a short delay before navigation for effect
     setTimeout(() => {
       setLoading(false);
       navigation.navigate("CounterScreen", { postTitle: post.title });
@@ -22,7 +21,7 @@ export default function DetailsScreen({ route, navigation }) {
       <TouchableOpacity
         style={styles.counterButton}
         onPress={handleOpenCounter}
-        disabled={loading} // prevent multiple taps
+        disabled={loading}
       >
         {loading ? (
           <ActivityIndicator size="small" color="#fff" />
@@ -52,3 +51,4 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
 });
+
