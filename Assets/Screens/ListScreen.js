@@ -5,7 +5,6 @@ export default function ListScreen({ navigation }) {
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    // Fetch data from API
     useEffect(() => {
         const fetchPosts = async () => {
             try {
@@ -72,12 +71,10 @@ const styles = StyleSheet.create({
     padding: 15,
     marginVertical: 8,
     marginHorizontal: 5,
-    // Shadow for iOS
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 4,
-    // Shadow for Android
     elevation: 4,
   },
   cardTitle: {
@@ -90,3 +87,4 @@ const styles = StyleSheet.create({
     color: "#555",
   },
 });
+
